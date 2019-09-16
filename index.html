@@ -5,10 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Train Times</title>
+     <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  <!-- Firebase References -->
+  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+
+  <!-- Moment.js Reference -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+
+  <title>Train Times</title>
 </head>
 
 <body>
@@ -20,13 +29,13 @@
         <!-- Jumbotron for page title -->
         <div class="jumbotron text-center">
             <h1 class="display-4">Magical Train Times</h1>
-            <p class="lead">Enter your train's info below to see its next arrival!</p>
+            <p class="lead">Enter your train's info below to see its next schedule for the day!</p>
         </div>
         <!-- Card to display employee data from the database -->
         <div class="card">
             <h5 class="card-header">Train Information</h5>
             <div class="card-body">
-                <table class="table">
+                <table class="table" id="trainTable">
                     <thead>
                         <tr>
                             <th scope="col">Train Name</th>
@@ -56,11 +65,11 @@
                         <input class="form-control" id="destination-input" type="text">
                     </div>
                     <div class="form-group row">
-                        <label for="start-time-input"><strong>First Train Time HH:mm - Military Time</strong></label>
+                        <label for="start-time-input"><strong>First Train Time (HH:mm - Military Time)</strong></label>
                         <input class="form-control" id="start-time-input" type="text">
                     </div>
                     <div class="form-group row">
-                        <label for="frequency-input"><strong>Frequency (min)</strong></label>
+                        <label for="frequency-input"><strong>Frequency (in minutes)</strong></label>
                         <input class="form-control" id="frequency-input" type="text">
                     </div>
                     <button type="submit" class="btn btn-primary" id="submitButton">Submit</button>
@@ -69,16 +78,8 @@
         </div>
     </div>
 
-
-
-    <!-- jQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
-    <!-- Moment JS -->
-    <script>"https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"</script>
     <!-- My JS -->
-    <script src="app.js"></script>
+    <script src="./assets/javascript/app.js"></script>
 </body>
 
 </html>
