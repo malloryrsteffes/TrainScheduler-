@@ -6,3 +6,18 @@ body {
 .container {
     margin-bottom: 100px;
 }
+
+.jumbotron {
+    background:linear-gradient(to bottom, rgba(245, 246, 252, 0.52), #83c0d5),
+    rgb(204, 236, 250);
+    
+
+}
+
+.card-header {
+    background: rgb(93, 95, 120, .6);
+}
+
+.btn-light {
+    background: rgb(234, 186, 110);
+}
