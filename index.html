@@ -17,6 +17,8 @@
   <!-- Moment.js Reference -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
 
+  <!-- My CSS -->
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   <title>Train Times</title>
 </head>
 
@@ -51,10 +53,13 @@
                 </table>
             </div>
         </div>
+      
         <!-- Card that contains form to add new employee info -->
         <div class="card mt-4">
-            <h5 class="card-header">Add Train</h5>
-            <div class="card-body">
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseCard" aria-expanded="false" aria-controls="collapseCard">
+                Add a train 
+              </button>
+            <div class="card-body collapse" id="collapseCard">
                 <form role="form">
                     <div class="form-group row">
                         <label for="name-input"><strong>Train Name</strong></label>
@@ -77,6 +82,7 @@
             </div>
         </div>
     </div>
+    
 
     <!-- My JS -->
     <script src="./assets/javascript/app.js"></script>
