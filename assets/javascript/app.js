@@ -20,6 +20,14 @@ var firebaseConfig = {
     //prevents the page from refreshing
     event.preventDefault();
 
+    // This will keep you from being able to submit a train without values in each input field
+    if ($.trim($("#name-input").val()) === "" || $.trim($("#destination-input").val()) === "" || 
+        $.trim($("#start-time-input").val()) === ""|| $.trim($("#frequency-input").val()) === "") {
+          alert('Please fill out all fields.');
+          return false;
+        }
+
+
     var trainName = $("#name-input").val().trim();
     var trainDestination = $("#destination-input").val().trim();
     var trainStartTime = moment($("#start-time-input").val().trim(), "HH:mm").format("X"); 
@@ -92,7 +100,7 @@ var firebaseConfig = {
     var newRow = $("<tr>").append(
       $("<td>").text(trainName),
       $("<td>").text(trainDestination),
-      $("<td>").text(trainFrequency + " min"),
+      $("<td>").text("Every " + trainFrequency + " min"),
       $("<td>").text(nextTrain),
       $("<td>").text(minutesAway),
     );
