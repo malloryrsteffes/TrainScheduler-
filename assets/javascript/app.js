@@ -98,4 +98,11 @@ var firebaseConfig = {
     );
 
     $("tbody").append(newRow);
+
+    // Handle errors
+  }, function(errorObject){
+    console.log("Errors handled: " + errorObject.code);
+
   })
+
+  
